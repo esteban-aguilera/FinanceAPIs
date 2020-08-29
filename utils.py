@@ -2,7 +2,7 @@ import numpy as np
 
 
 # --------------------------------------------------------------------------------
-# communication with api
+# functions
 # --------------------------------------------------------------------------------
 def extract_pairs(pairs):
     """Receives a list of pairs and returns two lists.
