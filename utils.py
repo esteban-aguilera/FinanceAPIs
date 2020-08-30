@@ -1,9 +1,35 @@
 import numpy as np
 
+from datetime import datetime, timedelta
+
 
 # --------------------------------------------------------------------------------
 # functions
 # --------------------------------------------------------------------------------
+def dates_arange(ti, tf=None, dt=None):
+    """Create an array of datetime objects.
+
+    Parameters
+    ----------
+    ti: datetime.datetime
+        Starting date.
+
+    tf: datetime.datetime, optional
+        Final date.  Default: datetime.today()
+
+    dt: datetime.timedelta, optional
+        spacing between array elements.  Default: datetime.timedelta(days=1)
+    """
+    if(tf is None):
+        tf = datetime.today()
+    if(dt is None):
+        dt = timedelta(days=1)
+    
+    dates = np.arange(ti, tf, dt).astype(datetime)
+    
+    return dates
+
+
 def extract_pairs(pairs):
     """Receives a list of pairs and returns two lists.
     
