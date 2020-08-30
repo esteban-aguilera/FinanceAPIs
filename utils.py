@@ -19,6 +19,11 @@ def dates_arange(ti, tf=None, dt=None):
 
     dt: datetime.timedelta, optional
         spacing between array elements.  Default: datetime.timedelta(days=1)
+
+    Returns
+    -------
+    dates: list
+        List of datetime.datetime objects.
     """
     if(tf is None):
         tf = datetime.today()
