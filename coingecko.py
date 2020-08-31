@@ -13,9 +13,11 @@ BASE_URL = 'https://api.coingecko.com/api/v3'
 
 
 # --------------------------------------------------------------------------------
-# functions
+# main
 # --------------------------------------------------------------------------------
 def main():
+    """Example on how to run this functions
+    """
     pairs = [('bitcoin', 'usd'), ('ethereum', 'usd')]
     dates = ['12-10-2015', '13-10-2015']
     
