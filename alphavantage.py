@@ -8,14 +8,17 @@ from datetime import datetime
 # main
 # --------------------------------------------------------------------------------
 def main():
-    """Example on how to run this functions
+    """Example on how to run the functions in this file.  The user must get a
+    AlphaVatange Key before using this file
     """
     # get daily data
     df = get_daily('AAPL', 'ALPHAVANTAGE_KEY')
+    print('daily data:')
     print(df, '\n\n')
     
     # get hourly data
     df = get_intraday('AAPL', 'ALPHAVANTAGE_KEY', 60)
+    print('hourly data:')
     print(df)
 
 
