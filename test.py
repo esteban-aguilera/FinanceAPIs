@@ -6,6 +6,9 @@ from finance_apis import alphavantage, coingecko
 # get APIs keys
 import secrets
 
+# --------------------------------------------------------------------------------
+# constants
+# --------------------------------------------------------------------------------
 ALPHAVANTAGE_APIKEY = os.environ.get('ALPHAVANTAGE_APIKEY')
 
 
