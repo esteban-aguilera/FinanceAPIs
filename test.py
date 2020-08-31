@@ -17,18 +17,30 @@ ALPHAVANTAGE_APIKEY = os.environ.get('ALPHAVANTAGE_APIKEY')
 # main
 # --------------------------------------------------------------------------------
 def main():
-    """Example on how to run the functions in this file.  The user must get a
-    AlphaVatange key before using this library.
-    """    
+    test_alphavantage()
+    print(3*'\n')
+    test_coingecko()
+
+
+# --------------------------------------------------------------------------------
+# functions
+# --------------------------------------------------------------------------------
+def test_alphavantage():
+    """Usage example of alphavantage.py
+    The user must get an AlphaVatange key before using this library.
+    """
     df = alphavantage.get_daily('AAPL', ALPHAVANTAGE_APIKEY)
     print('AlphaVantage daily data:')
     print(df, 2*'\n')
     
     df = alphavantage.get_intraday('AAPL', ALPHAVANTAGE_APIKEY, 60)
     print('AlphaVantage hourly data:')
-    print(df, 3*'\n')
+    print(df)
 
-    # test CoinGecko
+
+def test_coingecko():
+    """Usage example of coingecko.py
+    """
     pairs = [('bitcoin', 'usd'), ('ethereum', 'usd')]
     dates = ['12-10-2015', '13-10-2015']
     
