@@ -3,26 +3,13 @@ import pandas as pd
 import requests
 
 # package libraries
-from utils import extract_pairs, list_to_string
+from .utils import extract_pairs, list_to_string
 
 
 # --------------------------------------------------------------------------------
 # constants
 # --------------------------------------------------------------------------------
 BASE_URL = 'https://api.coingecko.com/api/v3'
-
-
-# --------------------------------------------------------------------------------
-# main
-# --------------------------------------------------------------------------------
-def main():
-    """Example on how to run this functions
-    """
-    pairs = [('bitcoin', 'usd'), ('ethereum', 'usd')]
-    dates = ['12-10-2015', '13-10-2015']
-    
-    val = historical_prices(pairs[0], dates)
-    print(val)
 
 
 # --------------------------------------------------------------------------------
@@ -140,10 +127,3 @@ def current_prices(pairs):
         values[i] = r[coin][currency]
     
     return values
-
-
-# --------------------------------------------------------------------------------
-# main
-# --------------------------------------------------------------------------------
-if __name__ == "__main__":
-    main()
